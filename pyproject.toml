@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ftcheck"
+version = "0.1.0"
+description = "Check whether importing a package re-enables the GIL on free-threaded CPython"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Fengrui Dong"}]
+requires-python = ">=3.13"
+
+[project.scripts]
+ftcheck = "ftcheck:main"
+
+[tool.setuptools]
+py-modules = ["ftcheck"]
